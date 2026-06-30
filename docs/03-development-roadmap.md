@@ -23,6 +23,37 @@ O objetivo é garantir que toda funcionalidade seja construída sobre uma base j
 
 ---
 
+# Objetivo do Roadmap
+
+Este roadmap define a ordem oficial de desenvolvimento do projeto.
+
+Nenhuma etapa deverá ser iniciada antes da conclusão da etapa anterior, salvo quando explicitamente indicado.
+
+O objetivo é garantir que toda funcionalidade seja construída sobre uma base já consolidada.
+
+---
+
+# Observação Importante
+
+Este roadmap apresenta a ordem conceitual das etapas de desenvolvimento e documentação do projeto.
+
+Entretanto, algumas configurações de infraestrutura deverão ser implementadas antecipadamente para garantir um fluxo de desenvolvimento seguro desde o primeiro commit.
+
+Em especial:
+
+- A **Integração Contínua (CI)** deverá ser configurada logo após a conclusão do setup inicial do projeto.
+- As pipelines deverão validar automaticamente, desde o início do desenvolvimento:
+  - formatação do código;
+  - lint;
+  - tipagem TypeScript;
+  - testes automatizados;
+  - geração da build.
+- A **Entrega Contínua (CD)** poderá ser implementada posteriormente, quando a aplicação estiver apta para publicação.
+
+Essa antecipação da configuração de CI não altera a organização deste guia, apenas garante que todas as funcionalidades desenvolvidas ao longo do projeto sejam continuamente validadas por processos automatizados, reduzindo retrabalho e aumentando a confiabilidade do código.
+
+---
+
 # Princípios do Desenvolvimento
 
 Durante todo o projeto serão seguidos os seguintes princípios.
