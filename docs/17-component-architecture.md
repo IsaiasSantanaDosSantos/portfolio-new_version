@@ -415,5 +415,6 @@ Ao concluir esta etapa, o projeto possuirá um conjunto claro de diretrizes para
 
 ➡️ **18 - Desenvolvimento da SPA**
 
-Na próxima etapa será definido o plano de implementação da Single Page Application, estabelecendo a ordem de construção das seções, a estratégia de desenvolvimento incremental, os critérios de validação e a sequência recomendada para implementar cada parte da interface sem comprometer a arquitetura construída até aqui.
+Na próxima etapa será definido o plano de implementação da Single Page Application, estabelecendo a ordem de construção das seções, a estratégia de desenvolvimento incremental, os critérios de validação e a sequência recomendada para implementar cada parte da interface sem comprometer a arquitetura construída até aqui.  
+
 [Desenvolvimento da SPA](./18-spa-development.md)

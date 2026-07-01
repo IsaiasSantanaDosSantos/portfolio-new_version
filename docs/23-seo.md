@@ -332,5 +332,6 @@ Ao concluir esta etapa, o projeto possuirá uma estratégia consistente de SEO, 
 
 ➡️ **24 - Performance**
 
-Na próxima etapa será definida a estratégia de otimização de desempenho da aplicação, incluindo carregamento de recursos, divisão de código (code splitting), otimização de imagens, lazy loading, caching, análise de métricas (Core Web Vitals) e boas práticas para garantir uma experiência rápida e eficiente aos usuários.
+Na próxima etapa será definida a estratégia de otimização de desempenho da aplicação, incluindo carregamento de recursos, divisão de código (code splitting), otimização de imagens, lazy loading, caching, análise de métricas (Core Web Vitals) e boas práticas para garantir uma experiência rápida e eficiente aos usuários.  
+
 [Performance](./24-performance.md)

@@ -407,5 +407,6 @@ Ao concluir esta etapa, o projeto possuirá uma estratégia de testes consistent
 
 ➡️ **22 - Storybook**
 
-Na próxima etapa será definida a estratégia para documentação visual dos componentes através do Storybook, estabelecendo padrões para criação de histórias, organização da documentação e integração com o Design System.
+Na próxima etapa será definida a estratégia para documentação visual dos componentes através do Storybook, estabelecendo padrões para criação de histórias, organização da documentação e integração com o Design System.  
+
 [Storybook](./22-storybook.md)

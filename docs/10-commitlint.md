@@ -318,5 +318,6 @@ A partir deste momento, nenhuma mensagem de commit fora do padrão será aceita 
 
 ➡️ **11 - Aliases de Importação**
 
-Na próxima etapa serão configurados os aliases de importação do TypeScript e do Vite, eliminando imports relativos complexos e tornando a navegação e manutenção do código mais simples e consistente.
+Na próxima etapa serão configurados os aliases de importação do TypeScript e do Vite, eliminando imports relativos complexos e tornando a navegação e manutenção do código mais simples e consistente.  
+
 [Aliases de Importação](./11-path-aliases.md)

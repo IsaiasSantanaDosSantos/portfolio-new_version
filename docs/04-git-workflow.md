@@ -496,5 +496,6 @@ Todas as próximas etapas do desenvolvimento deverão seguir rigorosamente estas
 
 ➡️ **05 - Setup do Projeto**
 
-Nesta etapa será iniciado o desenvolvimento do projeto. Serão criados o repositório, a aplicação React com Vite e TypeScript, além da configuração inicial das ferramentas que servirão de base para todas as implementações seguintes.
+Nesta etapa será iniciado o desenvolvimento do projeto. Serão criados o repositório, a aplicação React com Vite e TypeScript, além da configuração inicial das ferramentas que servirão de base para todas as implementações seguintes.  
+
 [Setup Inicial](./05-project-setup.md)

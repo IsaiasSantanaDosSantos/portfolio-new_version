@@ -482,4 +482,6 @@ Nenhuma pasta deverá ser criada durante o desenvolvimento sem respeitar os prin
 
 ➡️ **03 - Roadmap de Desenvolvimento**
 
-Neste documento será definida toda a sequência de implementação do projeto, especificando a ordem correta das etapas, suas dependências e os marcos de desenvolvimento, garantindo que nenhuma funcionalidade seja implementada antes da infraestrutura necessária. [development-roadmap](./03-development-roadmap.md)
+Neste documento será definida toda a sequência de implementação do projeto, especificando a ordem correta das etapas, suas dependências e os marcos de desenvolvimento, garantindo que nenhuma funcionalidade seja implementada antes da infraestrutura necessária.  
+
+[Development-roadmap](./03-development-roadmap.md)

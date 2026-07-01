@@ -298,5 +298,6 @@ O projeto deverá permanecer o mais próximo possível do template oficial, evit
 
 ➡️ **06 - Estrutura de Pastas**
 
-Na próxima etapa será criada a estrutura inicial de diretórios do projeto, preparando a organização física da aplicação antes da configuração das ferramentas de desenvolvimento.
+Na próxima etapa será criada a estrutura inicial de diretórios do projeto, preparando a organização física da aplicação antes da configuração das ferramentas de desenvolvimento.  
+
 [Estrutura de Pastas](./06-folder-structure.md)
