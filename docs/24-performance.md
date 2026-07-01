@@ -347,6 +347,6 @@ Ao concluir esta etapa, o projeto possuirá uma estratégia consistente para gar
 
 ➡️ **25 - CI/CD**
 
-Na próxima etapa será definida a estratégia de Integração Contínua e Entrega Contínua (CI/CD), incluindo automação de validações, execução de testes, análise de qualidade do código, builds e deploys, garantindo um fluxo de desenvolvimento seguro, padronizado e alinhado às boas práticas de engenharia de software.  
+Na próxima etapa será definida a estratégia de Integração Contínua e Entrega Contínua (CI/CD), incluindo automação de validações, execução de testes, análise de qualidade do código, builds e deploys, garantindo um fluxo de desenvolvimento seguro, padronizado e alinhado às boas práticas de engenharia de software.
 
 [CI/CD](./25-ci-cd.md)

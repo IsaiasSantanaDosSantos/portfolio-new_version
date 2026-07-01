@@ -325,6 +325,6 @@ Ao concluir esta etapa, o projeto possuirá uma estratégia clara para documenta
 
 ➡️ **23 - SEO**
 
-Na próxima etapa será definida a estratégia de otimização para mecanismos de busca, incluindo metadados, Open Graph, Twitter Cards, dados estruturados, sitemap, robots.txt, acessibilidade relacionada ao SEO e boas práticas para maximizar a visibilidade do portfólio em buscadores.  
+Na próxima etapa será definida a estratégia de otimização para mecanismos de busca, incluindo metadados, Open Graph, Twitter Cards, dados estruturados, sitemap, robots.txt, acessibilidade relacionada ao SEO e boas práticas para maximizar a visibilidade do portfólio em buscadores.
 
 [SEO](./23-seo.md)
