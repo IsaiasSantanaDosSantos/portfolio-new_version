@@ -365,6 +365,6 @@ Toda a organização física do projeto deverá refletir os princípios arquitet
 
 ➡️ **07 - ESLint**
 
-Na próxima etapa será configurado o ESLint utilizando a configuração mais atual do ecossistema JavaScript/TypeScript (Flat Config), estabelecendo as regras de qualidade de código que serão seguidas durante todo o desenvolvimento do projeto.  
+Na próxima etapa será configurado o ESLint utilizando a configuração mais atual do ecossistema JavaScript/TypeScript (Flat Config), estabelecendo as regras de qualidade de código que serão seguidas durante todo o desenvolvimento do projeto.
 
 [ESLint](./07-eslint.md)

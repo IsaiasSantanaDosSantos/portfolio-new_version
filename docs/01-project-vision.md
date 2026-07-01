@@ -284,6 +284,6 @@ Nenhuma implementação deverá ser iniciada antes que esses objetivos estejam b
 
 ➡️ **02 - Arquitetura Geral**
 
-Neste documento será definida toda a arquitetura da aplicação, incluindo organização de pastas, responsabilidades de cada módulo e princípios estruturais que servirão de base para o restante do desenvolvimento.  
+Neste documento será definida toda a arquitetura da aplicação, incluindo organização de pastas, responsabilidades de cada módulo e princípios estruturais que servirão de base para o restante do desenvolvimento.
 
 [Architecture](./02-architecture.md)

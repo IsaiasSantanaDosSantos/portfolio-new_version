@@ -631,6 +631,6 @@ A partir deste ponto, cada documento da documentação corresponderá diretament
 
 ➡️ **04 - Git Workflow**
 
-Neste documento será definido o fluxo oficial de desenvolvimento utilizando Git, incluindo estratégia de branches, convenções de commits, Pull Requests e boas práticas de versionamento que serão adotadas durante todo o projeto.  
+Neste documento será definido o fluxo oficial de desenvolvimento utilizando Git, incluindo estratégia de branches, convenções de commits, Pull Requests e boas práticas de versionamento que serão adotadas durante todo o projeto.
 
 [Git Workflow](./04-git-workflow.md)

@@ -443,6 +443,6 @@ Ao concluir esta etapa, o projeto possuirá um plano claro e incremental para o 
 
 ➡️ **19 - Dashboard Administrativo**
 
-Na próxima etapa será definida a arquitetura do Dashboard Administrativo, incluindo autenticação, organização das funcionalidades, estratégia de edição de conteúdo, permissões de acesso e integração futura com o backend, preparando a aplicação para substituir gradualmente os dados estáticos por conteúdos gerenciados dinamicamente.  
+Na próxima etapa será definida a arquitetura do Dashboard Administrativo, incluindo autenticação, organização das funcionalidades, estratégia de edição de conteúdo, permissões de acesso e integração futura com o backend, preparando a aplicação para substituir gradualmente os dados estáticos por conteúdos gerenciados dinamicamente.
 
 [Dashboard Administrativo](./19-dashboard.md)

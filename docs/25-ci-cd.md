@@ -362,6 +362,6 @@ Ao concluir esta etapa, o projeto possuirá uma estratégia de CI/CD padronizada
 
 ➡️ **26 - Checklist de Produção**
 
-Na próxima etapa será consolidado um checklist completo para validar que o projeto está realmente pronto para produção, reunindo todos os critérios definidos ao longo deste guia em uma única referência para a entrega final da aplicação.  
+Na próxima etapa será consolidado um checklist completo para validar que o projeto está realmente pronto para produção, reunindo todos os critérios definidos ao longo deste guia em uma única referência para a entrega final da aplicação.
 
 [Checklist de Produção](./26-production-checklist.md)

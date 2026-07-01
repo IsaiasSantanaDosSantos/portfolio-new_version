@@ -332,6 +332,6 @@ Isso garante que o repositório permaneça consistente, reduzindo erros simples 
 
 ➡️ **10 - Commitlint**
 
-Na próxima etapa será configurado o Commitlint para validar automaticamente as mensagens de commit, garantindo conformidade com o padrão Conventional Commits definido no Git Workflow.  
+Na próxima etapa será configurado o Commitlint para validar automaticamente as mensagens de commit, garantindo conformidade com o padrão Conventional Commits definido no Git Workflow.
 
 [Commitlint](./10-commitlint.md)

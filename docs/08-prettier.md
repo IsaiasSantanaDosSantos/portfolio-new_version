@@ -349,6 +349,6 @@ A partir deste momento, toda alteração no projeto deverá respeitar tanto as r
 
 ➡️ **09 - Husky e lint-staged**
 
-Na próxima etapa serão configurados o Husky e o lint-staged para automatizar a execução do ESLint e do Prettier antes de cada commit, impedindo que código fora do padrão seja versionado.  
+Na próxima etapa serão configurados o Husky e o lint-staged para automatizar a execução do ESLint e do Prettier antes de cada commit, impedindo que código fora do padrão seja versionado.
 
 [Husky e lint-staged](./09-husky.md)

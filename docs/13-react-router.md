@@ -351,6 +351,6 @@ Embora exista apenas uma rota inicial, a arquitetura estará pronta para suporta
 
 ➡️ **14 - Internacionalização**
 
-Na próxima etapa será configurada a infraestrutura de internacionalização utilizando i18next, preparando a aplicação para suportar múltiplos idiomas tanto para textos estáticos quanto, futuramente, para conteúdos dinâmicos provenientes do backend.  
+Na próxima etapa será configurada a infraestrutura de internacionalização utilizando i18next, preparando a aplicação para suportar múltiplos idiomas tanto para textos estáticos quanto, futuramente, para conteúdos dinâmicos provenientes do backend.
 
 [Internacionalização](./14-internationalization.md)
