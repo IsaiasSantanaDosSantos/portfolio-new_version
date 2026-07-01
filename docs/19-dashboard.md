@@ -354,3 +354,4 @@ Ao concluir esta etapa, a aplicação possuirá uma arquitetura clara para sua �
 ➡️ **20 - Firebase**
 
 Na próxima etapa será definida a arquitetura de integração com o Firebase, incluindo autenticação, banco de dados, armazenamento, regras de segurança e estratégia de acesso aos dados, sempre mantendo o desacoplamento entre a aplicação e a infraestrutura de backend.
+[Firebase](./20-firebase.md)

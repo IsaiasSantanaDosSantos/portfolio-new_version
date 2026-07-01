@@ -74,15 +74,15 @@ Disponível para qualquer visitante.
 
 Responsável por apresentar:
 
-* Página inicial
-* Sobre
-* Tecnologias
-* Experiência profissional
-* Formação
-* Projetos
-* Contato
-* Currículo
-* Links sociais
+- Página inicial
+- Sobre
+- Tecnologias
+- Experiência profissional
+- Formação
+- Projetos
+- Contato
+- Currículo
+- Links sociais
 
 ---
 
@@ -92,13 +92,13 @@ Acesso restrito mediante autenticação.
 
 Responsável por permitir:
 
-* Gerenciamento de projetos
-* Gerenciamento de experiências
-* Gerenciamento das habilidades
-* Gerenciamento das informações pessoais
-* Gerenciamento das traduções
-* Gerenciamento dos links sociais
-* Gerenciamento das configurações gerais
+- Gerenciamento de projetos
+- Gerenciamento de experiências
+- Gerenciamento das habilidades
+- Gerenciamento das informações pessoais
+- Gerenciamento das traduções
+- Gerenciamento dos links sociais
+- Gerenciamento das configurações gerais
 
 ---
 
@@ -166,11 +166,11 @@ Toda página pública deverá ser preparada para indexação por mecanismos de b
 
 O projeto foi pensado para atender principalmente:
 
-* Recrutadores.
-* Empresas de tecnologia.
-* Tech Leads.
-* Desenvolvedores Front-end.
-* Clientes interessados em desenvolvimento web.
+- Recrutadores.
+- Empresas de tecnologia.
+- Tech Leads.
+- Desenvolvedores Front-end.
+- Clientes interessados em desenvolvimento web.
 
 ---
 
@@ -180,15 +180,15 @@ A definição detalhada da stack será realizada em documentos posteriores.
 
 Entretanto, inicialmente o projeto utilizará tecnologias modernas do ecossistema React, incluindo ferramentas para:
 
-* Componentização.
-* Internacionalização.
-* Testes.
-* Documentação.
-* Roteamento.
-* Qualidade de código.
-* Integração contínua.
-* Persistência de dados.
-* Autenticação.
+- Componentização.
+- Internacionalização.
+- Testes.
+- Documentação.
+- Roteamento.
+- Qualidade de código.
+- Integração contínua.
+- Persistência de dados.
+- Autenticação.
 
 Caso alguma tecnologia seja substituída durante o desenvolvimento, a alteração deverá ser documentada antes de sua implementação.
 
@@ -236,13 +236,13 @@ Sempre será priorizada uma implementação consistente, mesmo que demande mais 
 
 Os seguintes itens estão fora do escopo inicial.
 
-* Backend próprio.
-* APIs desenvolvidas em Node.js.
-* Sistema de comentários.
-* Blog.
-* Área pública para cadastro de usuários.
-* Marketplace.
-* Funcionalidades que não agreguem valor direto ao objetivo principal do projeto.
+- Backend próprio.
+- APIs desenvolvidas em Node.js.
+- Sistema de comentários.
+- Blog.
+- Área pública para cadastro de usuários.
+- Marketplace.
+- Funcionalidades que não agreguem valor direto ao objetivo principal do projeto.
 
 Esses itens poderão ser considerados futuramente, caso exista necessidade.
 
@@ -252,17 +252,17 @@ Esses itens poderão ser considerados futuramente, caso exista necessidade.
 
 O projeto será considerado concluído quando atender aos seguintes critérios:
 
-* Interface totalmente responsiva.
-* Dark Mode e Light Mode.
-* Internacionalização completa.
-* Painel administrativo funcional.
-* Dados persistidos em banco de dados.
-* Testes implementados.
-* Storybook configurado.
-* Documentação completa.
-* Deploy automatizado.
-* Código organizado e padronizado.
-* Excelente pontuação em Performance, Acessibilidade e SEO.
+- Interface totalmente responsiva.
+- Dark Mode e Light Mode.
+- Internacionalização completa.
+- Painel administrativo funcional.
+- Dados persistidos em banco de dados.
+- Testes implementados.
+- Storybook configurado.
+- Documentação completa.
+- Deploy automatizado.
+- Código organizado e padronizado.
+- Excelente pontuação em Performance, Acessibilidade e SEO.
 
 ---
 
@@ -270,11 +270,11 @@ O projeto será considerado concluído quando atender aos seguintes critérios:
 
 Ao concluir este documento deverá estar claro:
 
-* O propósito do projeto.
-* O escopo da aplicação.
-* Os objetivos técnicos.
-* Os princípios que orientarão todas as decisões arquiteturais.
-* O limite do escopo inicial.
+- O propósito do projeto.
+- O escopo da aplicação.
+- Os objetivos técnicos.
+- Os princípios que orientarão todas as decisões arquiteturais.
+- O limite do escopo inicial.
 
 Nenhuma implementação deverá ser iniciada antes que esses objetivos estejam bem definidos.
 
@@ -285,3 +285,4 @@ Nenhuma implementação deverá ser iniciada antes que esses objetivos estejam b
 ➡️ **02 - Arquitetura Geral**
 
 Neste documento será definida toda a arquitetura da aplicação, incluindo organização de pastas, responsabilidades de cada módulo e princípios estruturais que servirão de base para o restante do desenvolvimento.
+[architecture](./02-architecture.md)

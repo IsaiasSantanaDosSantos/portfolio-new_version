@@ -313,3 +313,4 @@ A partir deste momento, qualquer alteração no projeto deverá respeitar as reg
 ➡️ **08 - Prettier**
 
 Na próxima etapa será configurado o Prettier e integrada sua atuação ao ESLint, garantindo padronização automática de formatação em todo o projeto e evitando conflitos entre regras de lint e estilo de código.
+[Prettier](./08-prettier.md)

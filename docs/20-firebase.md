@@ -366,3 +366,4 @@ Ao concluir esta etapa, o projeto possuirá uma arquitetura de integração com 
 ➡️ **21 - Testes**
 
 Na próxima etapa será definida a estratégia de testes da aplicação, incluindo testes unitários, de integração e de componentes, além das ferramentas, convenções e critérios mínimos de cobertura que deverão ser adotados durante todo o desenvolvimento.
+[Testes](./21-testing.md)

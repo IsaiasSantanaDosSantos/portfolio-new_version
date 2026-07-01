@@ -8,27 +8,27 @@
 
 # Pré-requisitos
 
-* ✅ 01 - Visão Geral do Projeto
-* ✅ 02 - Arquitetura Geral
-* ✅ 03 - Roadmap de Desenvolvimento
-* ✅ 04 - Git Workflow
-* ✅ 05 - Setup Inicial
-* ✅ 06 - Estrutura de Pastas
-* ✅ 07 - ESLint
-* ✅ 08 - Prettier
-* ✅ 09 - Husky e lint-staged
-* ✅ 10 - Commitlint
-* ✅ 11 - Aliases de Importação
-* ✅ 12 - Styled Components
-* ✅ 13 - React Router
-* ✅ 14 - Internacionalização
-* ✅ 15 - Design System
-* ✅ 16 - Tema e Design Tokens
-* ✅ 17 - Arquitetura dos Componentes
-* ✅ 18 - Desenvolvimento da SPA
-* ✅ 19 - Dashboard Administrativo
-* ✅ 20 - Firebase
-* ✅ 21 - Testes
+- ✅ 01 - Visão Geral do Projeto
+- ✅ 02 - Arquitetura Geral
+- ✅ 03 - Roadmap de Desenvolvimento
+- ✅ 04 - Git Workflow
+- ✅ 05 - Setup Inicial
+- ✅ 06 - Estrutura de Pastas
+- ✅ 07 - ESLint
+- ✅ 08 - Prettier
+- ✅ 09 - Husky e lint-staged
+- ✅ 10 - Commitlint
+- ✅ 11 - Aliases de Importação
+- ✅ 12 - Styled Components
+- ✅ 13 - React Router
+- ✅ 14 - Internacionalização
+- ✅ 15 - Design System
+- ✅ 16 - Tema e Design Tokens
+- ✅ 17 - Arquitetura dos Componentes
+- ✅ 18 - Desenvolvimento da SPA
+- ✅ 19 - Dashboard Administrativo
+- ✅ 20 - Firebase
+- ✅ 21 - Testes
 
 ---
 
@@ -44,11 +44,11 @@ O Storybook será utilizado como uma documentação viva do Design System, permi
 
 Ao concluir esta etapa, deverá estar definido:
 
-* Estratégia de documentação dos componentes.
-* Organização das Stories.
-* Convenções de nomenclatura.
-* Critérios para criação de novas histórias.
-* Integração com o Design System.
+- Estratégia de documentação dos componentes.
+- Organização das Stories.
+- Convenções de nomenclatura.
+- Critérios para criação de novas histórias.
+- Integração com o Design System.
 
 A implementação efetiva do Storybook ocorrerá durante o desenvolvimento dos componentes.
 
@@ -105,15 +105,15 @@ Cada componente deverá possuir histórias para seus principais estados.
 
 Exemplo para um botão:
 
-* Default
-* Primary
-* Secondary
-* Disabled
-* Loading
-* With Icon
-* Full Width
-* Dark Theme
-* Light Theme
+- Default
+- Primary
+- Secondary
+- Disabled
+- Loading
+- With Icon
+- Full Width
+- Dark Theme
+- Light Theme
 
 Nem todas as variações serão obrigatórias para todos os componentes. Devem ser documentados apenas os estados realmente suportados.
 
@@ -123,11 +123,11 @@ Nem todas as variações serão obrigatórias para todos os componentes. Devem s
 
 Cada Story deverá conter:
 
-* descrição do componente;
-* objetivo;
-* exemplos de utilização;
-* propriedades disponíveis;
-* observações relevantes.
+- descrição do componente;
+- objetivo;
+- exemplos de utilização;
+- propriedades disponíveis;
+- observações relevantes.
 
 Sempre que possível, utilizar os recursos de documentação automática do Storybook.
 
@@ -137,11 +137,11 @@ Sempre que possível, utilizar os recursos de documentação automática do Stor
 
 O Storybook deverá utilizar exatamente a mesma infraestrutura visual da aplicação:
 
-* ThemeProvider;
-* Design Tokens;
-* Tipografia;
-* Espaçamentos;
-* Componentes compartilhados.
+- ThemeProvider;
+- Design Tokens;
+- Tipografia;
+- Espaçamentos;
+- Componentes compartilhados.
 
 Isso garante consistência entre a documentação e a interface real da aplicação.
 
@@ -149,11 +149,11 @@ Isso garante consistência entre a documentação e a interface real da aplicaç
 
 # Boas práticas
 
-* Documentar apenas componentes reutilizáveis.
-* Evitar Stories redundantes.
-* Manter as histórias simples e objetivas.
-* Atualizar a documentação sempre que um componente for alterado.
-* Utilizar controles (Controls) para facilitar a inspeção das propriedades dos componentes.
+- Documentar apenas componentes reutilizáveis.
+- Evitar Stories redundantes.
+- Manter as histórias simples e objetivas.
+- Atualizar a documentação sempre que um componente for alterado.
+- Utilizar controles (Controls) para facilitar a inspeção das propriedades dos componentes.
 
 ---
 
@@ -161,10 +161,10 @@ Isso garante consistência entre a documentação e a interface real da aplicaç
 
 Não criar Stories para:
 
-* páginas completas;
-* componentes temporários;
-* componentes exclusivos de uma única tela;
-* componentes internos sem potencial de reutilização.
+- páginas completas;
+- componentes temporários;
+- componentes exclusivos de uma única tela;
+- componentes internos sem potencial de reutilização.
 
 ---
 
@@ -172,10 +172,10 @@ Não criar Stories para:
 
 Confirmar:
 
-* [ ] Estratégia documentada.
-* [ ] Convenções definidas.
-* [ ] Organização estabelecida.
-* [ ] Integração com o Design System prevista.
+- [ ] Estratégia documentada.
+- [ ] Convenções definidas.
+- [ ] Organização estabelecida.
+- [ ] Integração com o Design System prevista.
 
 Quando o Storybook estiver implementado, validar:
 
@@ -185,10 +185,10 @@ npm run storybook
 
 Confirmar:
 
-* abertura correta da interface;
-* carregamento dos componentes;
-* funcionamento dos temas;
-* renderização das Stories.
+- abertura correta da interface;
+- carregamento dos componentes;
+- funcionamento dos temas;
+- renderização das Stories.
 
 ---
 
@@ -305,13 +305,13 @@ Remover também a branch remota.
 
 # Critérios para considerar esta etapa concluída
 
-* [ ] Estratégia documentada.
-* [ ] Convenções estabelecidas.
-* [ ] Organização definida.
-* [ ] Commits realizados.
-* [ ] Pull Request aprovada.
-* [ ] Branch removida.
-* [ ] `main` atualizada.
+- [ ] Estratégia documentada.
+- [ ] Convenções estabelecidas.
+- [ ] Organização definida.
+- [ ] Commits realizados.
+- [ ] Pull Request aprovada.
+- [ ] Branch removida.
+- [ ] `main` atualizada.
 
 ---
 
@@ -326,3 +326,4 @@ Ao concluir esta etapa, o projeto possuirá uma estratégia clara para documenta
 ➡️ **23 - SEO**
 
 Na próxima etapa será definida a estratégia de otimização para mecanismos de busca, incluindo metadados, Open Graph, Twitter Cards, dados estruturados, sitemap, robots.txt, acessibilidade relacionada ao SEO e boas práticas para maximizar a visibilidade do portfólio em buscadores.
+[SEO](./23-seo.md)

@@ -388,3 +388,4 @@ A arquitetura permitirá que, nas etapas futuras, os textos estáticos sejam tra
 ➡️ **15 - Design System**
 
 Na próxima etapa será definida a arquitetura do Design System, estabelecendo seus princípios, organização, convenções e a estrutura dos componentes reutilizáveis que servirão de base para toda a interface da aplicação.
+[Design System](./15-design-system.md)

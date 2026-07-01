@@ -406,3 +406,4 @@ Nenhum componente visual definitivo deverá existir ao final deste documento.
 ➡️ **13 - React Router**
 
 Na próxima etapa será configurado o React Router, preparando a SPA para suportar navegação, futuras rotas administrativas e organização da estrutura de páginas, mesmo que inicialmente a aplicação possua apenas a rota principal.
+[React Router](./13-react-router.md)

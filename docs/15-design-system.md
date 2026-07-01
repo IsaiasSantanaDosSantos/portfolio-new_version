@@ -411,3 +411,4 @@ Essa base garantirá consistência, previsibilidade e facilitará a futura docum
 ➡️ **16 - Tema e Design Tokens**
 
 Na próxima etapa serão definidos os Design Tokens da aplicação, estabelecendo a base visual compartilhada por todo o projeto, incluindo cores, tipografia, espaçamentos, bordas, sombras, elevações, breakpoints e demais propriedades utilizadas pelo tema. Esses tokens servirão como única fonte de verdade para a construção dos componentes do Design System e para a implementação dos modos claro e escuro, garantindo consistência, escalabilidade e facilidade de manutenção.
+[Tema e Design Tokens](./16-theme-and-design-tokens.md)

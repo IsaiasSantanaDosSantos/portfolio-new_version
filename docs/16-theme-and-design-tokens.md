@@ -448,3 +448,4 @@ Ao concluir esta etapa, a aplicação possuirá uma fundação visual consistent
 ➡️ **17 - Arquitetura dos Componentes**
 
 Na próxima etapa será definida a arquitetura dos componentes da aplicação, estabelecendo padrões de organização, composição, reutilização e responsabilidades para todos os componentes que serão desenvolvidos nas etapas seguintes.
+[Arquitetura dos Componentes](./17-component-architecture.md)

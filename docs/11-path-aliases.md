@@ -126,7 +126,7 @@ Criar temporariamente um import utilizando um dos aliases.
 Exemplo:
 
 ```ts
-import {} from "@utils";
+import {} from '@utils';
 ```
 
 Confirmar que:
@@ -328,3 +328,4 @@ A partir deste momento, todos os novos imports deverão utilizar os aliases defi
 ➡️ **12 - Styled Components**
 
 Na próxima etapa será configurado o Styled Components, juntamente com a estrutura inicial de tema, preparando o projeto para receber o Design System e suportar os modos claro e escuro definidos na arquitetura.
+[Styled Components](./12-styled-components.md)
