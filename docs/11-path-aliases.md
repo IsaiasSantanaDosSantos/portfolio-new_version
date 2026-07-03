@@ -1,127 +1,174 @@
-# 11 - Aliases de Importação
-
-> **Objetivo desta etapa**
->
-> Configurar aliases de importação para eliminar caminhos relativos complexos, tornando o código mais legível, desacoplado da estrutura física das pastas e mais fácil de manter.
-
----
-
-# Pré-requisitos
-
-- ✅ 01 - Visão Geral do Projeto
-- ✅ 02 - Arquitetura Geral
-- ✅ 03 - Roadmap de Desenvolvimento
-- ✅ 04 - Git Workflow
-- ✅ 05 - Setup Inicial
-- ✅ 06 - Estrutura de Pastas
-- ✅ 07 - ESLint
-- ✅ 08 - Prettier
-- ✅ 09 - Husky e lint-staged
-- ✅ 10 - Commitlint
-
----
-
-# Por que agora?
-
-Até este momento a estrutura do projeto já está definida.
-
-Antes de iniciarmos a implementação da arquitetura da aplicação, é importante configurar os aliases de importação para evitar caminhos relativos longos e frágeis.
-
-Essa configuração permitirá reorganizar diretórios futuramente com um impacto mínimo sobre o restante do código.
-
----
-
-# Objetivo
-
-Ao concluir esta etapa, o projeto deverá possuir:
-
-- Aliases configurados no TypeScript.
-- Aliases configurados no Vite.
-- Imports absolutos funcionando corretamente.
-- Estrutura preparada para crescer sem depender de caminhos relativos.
-
-Os aliases deverão refletir apenas os diretórios atualmente existentes.
-
-Novos aliases serão adicionados conforme novas estruturas forem surgindo.
-
----
-
-# Princípios
-
-Durante esta etapa deverão ser seguidos os seguintes princípios.
-
-## Arquitetura antes de conveniência
-
-Os aliases deverão representar responsabilidades da aplicação e não apenas facilitar a escrita dos imports.
-
----
-
-## Evitar alias genérico
-
-Não será utilizado:
-
-```text
-@/*
-```
-
-Cada responsabilidade possuirá seu próprio alias.
-
----
-
-## Evolução incremental
-
-Novos aliases somente serão criados quando novos diretórios passarem a existir.
-
----
-
-# Aliases desta etapa
-
-Configurar os seguintes aliases:
-
-| Alias         | Diretório        |
-| ------------- | ---------------- |
-| `@assets`     | `src/assets`     |
-| `@components` | `src/components` |
-| `@hooks`      | `src/hooks`      |
-| `@pages`      | `src/pages`      |
-| `@providers`  | `src/providers`  |
-| `@styles`     | `src/styles`     |
-| `@types`      | `src/types`      |
-| `@utils`      | `src/utils`      |
-
----
-
 # Etapa 1 — Configurar o TypeScript
 
-Atualizar o arquivo:
+Nesta etapa será configurado o TypeScript para reconhecer os aliases de importação.
+
+Abra o arquivo:
 
 ```text
 tsconfig.app.json
 ```
 
-Adicionar a configuração de `baseUrl` e `paths`, mapeando todos os aliases definidos anteriormente.
+Localize a seção:
 
-Utilizar sempre caminhos relativos ao diretório `src`.
+```json
+{
+  "compilerOptions": {
+    ...
+  }
+}
+```
+
+Dentro de `compilerOptions`, adicione (ou atualize, caso já existam) as propriedades:
+
+- `baseUrl`
+- `paths`
+
+A propriedade `baseUrl` deverá possuir o valor:
+
+```json
+"baseUrl": "."
+```
+
+Em seguida, configure `paths` com os seguintes mapeamentos:
+
+```json
+"paths": {
+  "@assets/*": ["src/assets/*"],
+  "@components/*": ["src/components/*"],
+  "@hooks/*": ["src/hooks/*"],
+  "@pages/*": ["src/pages/*"],
+  "@providers/*": ["src/providers/*"],
+  "@styles/*": ["src/styles/*"],
+  "@types/*": ["src/types/*"],
+  "@utils/*": ["src/utils/*"]
+}
+```
+
+Ao concluir esta etapa, o arquivo deverá possuir as propriedades `baseUrl` e `paths` configuradas dentro de `compilerOptions`.
+
+> **Importante**
+>
+> Nesta etapa apenas o TypeScript reconhecerá os aliases.
+> Eles ainda não funcionarão durante a execução da aplicação até que o Vite também seja configurado.
 
 ---
 
 # Etapa 2 — Configurar o Vite
 
-Atualizar o arquivo:
+Após configurar os aliases no TypeScript, é necessário configurar o Vite para que eles também funcionem durante a execução da aplicação.
+
+Abra o arquivo:
 
 ```text
 vite.config.ts
 ```
 
-Adicionar a resolução dos aliases utilizando a API oficial do Vite.
+## Importar a função `resolve`
 
-Os aliases deverão corresponder exatamente aos definidos no TypeScript.
+Caso ainda não exista, adicione o seguinte import:
+
+```ts
+import { resolve } from 'node:path';
+```
+
+Ao final, o início do arquivo deverá ficar semelhante a este:
+
+```ts
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { resolve } from 'node:path';
+```
+
+> **Observação**
+>
+> Caso o projeto utilize outros plugins do Vite, mantenha-os normalmente. Apenas adicione o import da função `resolve`.
+
+---
+
+## Configurar os aliases
+
+Dentro do objeto passado para `defineConfig()`, adicione a propriedade `resolve`.
+
+Em seguida, dentro de `resolve`, adicione a propriedade `alias` contendo todos os aliases definidos no `tsconfig.app.json`.
+
+A configuração deverá ficar semelhante ao exemplo abaixo:
+
+```ts
+resolve: {
+  alias: {
+    '@assets': resolve(__dirname, 'src/assets'),
+    '@components': resolve(__dirname, 'src/components'),
+    '@hooks': resolve(__dirname, 'src/hooks'),
+    '@pages': resolve(__dirname, 'src/pages'),
+    '@providers': resolve(__dirname, 'src/providers'),
+    '@styles': resolve(__dirname, 'src/styles'),
+    '@types': resolve(__dirname, 'src/types'),
+    '@utils': resolve(__dirname, 'src/utils'),
+  },
+},
+```
+
+Caso o arquivo ainda possua apenas a configuração básica do Vite:
+
+```ts
+export default defineConfig({
+  plugins: [react()],
+});
+```
+
+Após esta etapa, ele deverá ficar semelhante a:
+
+```ts
+export default defineConfig({
+  plugins: [react()],
+
+  resolve: {
+    alias: {
+      '@assets': resolve(__dirname, 'src/assets'),
+      '@components': resolve(__dirname, 'src/components'),
+      '@hooks': resolve(__dirname, 'src/hooks'),
+      '@pages': resolve(__dirname, 'src/pages'),
+      '@providers': resolve(__dirname, 'src/providers'),
+      '@styles': resolve(__dirname, 'src/styles'),
+      '@types': resolve(__dirname, 'src/types'),
+      '@utils': resolve(__dirname, 'src/utils'),
+    },
+  },
+});
+```
+
+---
+
+## Validação
+
+Ao concluir esta etapa, confirme que:
+
+- Todos os aliases configurados no `tsconfig.app.json` também foram configurados no `vite.config.ts`.
+- Não existem diferenças entre os nomes dos aliases definidos nos dois arquivos.
+- O projeto continua compilando normalmente.
+- O Vite consegue resolver corretamente todos os imports utilizando aliases.
+
+> **Importante**
+>
+> Sempre que um novo alias for criado no projeto, ele deverá ser adicionado **tanto** no `tsconfig.app.json` **quanto** no `vite.config.ts`. Manter essas configurações sincronizadas evita erros de compilação e resolução de módulos.
 
 ---
 
 # Etapa 3 — Validar a configuração
 
-Criar temporariamente um import utilizando um dos aliases.
+Após concluir a configuração do TypeScript e do Vite, é necessário validar que ambos estão funcionando corretamente.
+
+Escolha qualquer arquivo `.ts` ou `.tsx` existente no projeto.
+
+Por exemplo:
+
+```
+src/main.tsx
+```
+
+ou qualquer componente existente.
+
+Crie temporariamente um import utilizando um dos aliases configurados.
 
 Exemplo:
 
@@ -129,13 +176,20 @@ Exemplo:
 import {} from '@utils';
 ```
 
-Confirmar que:
+Caso o diretório correspondente ainda esteja vazio, crie temporariamente um arquivo apenas para realizar o teste.
 
-- o TypeScript reconhece o alias;
-- o Vite resolve corretamente o caminho;
-- não existem erros durante a compilação.
+Durante a validação, confirme que:
 
-Após a validação, remover imports temporários que não sejam necessários.
+- o VS Code reconhece o alias sem apresentar erros;
+- o autocomplete funciona normalmente;
+- o TypeScript reconhece o caminho informado;
+- o Vite resolve corretamente o import durante a execução;
+- nenhuma mensagem de erro é exibida no terminal ou no navegador.
+
+Após realizar a validação:
+
+- remova quaisquer imports criados apenas para teste;
+- remova arquivos temporários que tenham sido criados exclusivamente para validar os aliases.
 
 ---
 
@@ -143,11 +197,14 @@ Após a validação, remover imports temporários que não sejam necessários.
 
 Confirmar:
 
-- [ ] Todos os aliases configurados.
-- [ ] TypeScript reconhece os aliases.
-- [ ] Vite resolve corretamente os imports.
-- [ ] Projeto executando normalmente.
-- [ ] Nenhum erro de compilação.
+- [ ] Todos os aliases foram configurados no `tsconfig.app.json`.
+- [ ] Todos os aliases foram configurados no `vite.config.ts`.
+- [ ] Os aliases são idênticos nos dois arquivos.
+- [ ] O VS Code reconhece corretamente os imports.
+- [ ] O TypeScript não apresenta erros.
+- [ ] O Vite resolve corretamente os aliases.
+- [ ] O projeto executa normalmente.
+- [ ] Não existem erros de compilação.
 
 Executar:
 
@@ -155,13 +212,15 @@ Executar:
 npm run dev
 ```
 
-Em seguida:
+Verificar que a aplicação inicia normalmente.
+
+Em seguida, executar:
 
 ```bash
 npm run lint
 ```
 
-Todos os comandos deverão finalizar sem erros.
+Ambos os comandos deverão finalizar sem erros.
 
 ---
 

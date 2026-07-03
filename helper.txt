@@ -1,0 +1,1 @@
+Agora falta seguir o passo "[Aliases de Importação](./11-path-aliases.md)"
