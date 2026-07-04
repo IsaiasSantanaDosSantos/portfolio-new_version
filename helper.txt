@@ -1,1 +1,7 @@
-Agora falta seguir o passo "[Aliases de Importação](./11-path-aliases.md)"
+Agora falta seguir o passo "Próxima etapa ➡️ 12 - Styled Components"
+
+
+Parte 3B → GlobalStyle.ts completo.
+Parte 3C → styled.d.ts, index.ts, main.tsx, validação, commits e checklist final.
+
+Agora siga para a "Parte 3C → styled.d.ts, index.ts, main.tsx, validação, commits e checklist final", seguindo exatamante de onde parou na Parte 3B → GlobalStyle.ts completo., mantendo sempre o mesmo padrão!

@@ -2,15 +2,29 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@assets": ["src/assets"],
       "@assets/*": ["src/assets/*"],
+
+      "@components": ["src/components"],
       "@components/*": ["src/components/*"],
+
+      "@hooks": ["src/hooks"],
       "@hooks/*": ["src/hooks/*"],
+
+      "@pages": ["src/pages"],
       "@pages/*": ["src/pages/*"],
+
+      "@providers": ["src/providers"],
       "@providers/*": ["src/providers/*"],
+
+      "@styles": ["src/styles/index.ts"],
       "@styles/*": ["src/styles/*"],
+
+      "@types": ["src/types"],
       "@types/*": ["src/types/*"],
-      "@utils/*": ["src/utils/*"]
-      // "@utils": ["src/utils/index.ts"] // Caso não funcione, fazer isso em todos os aliases
+
+      "@utils/*": ["src/utils/*"],
+      "@utils": ["src/utils/index.ts"]
     },
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "es2023",
