@@ -300,11 +300,11 @@ Após executar os comandos acima, o arquivo `package.json` deverá possuir depen
 {
   "dependencies": {
     "styled-components": "^6.x.x"
-  },
+  }
 
-//   "devDependencies": {
-//     "@types/styled-components": "^5.x.x"
-//   }
+  //   "devDependencies": {
+  //     "@types/styled-components": "^5.x.x"
+  //   }
 }
 ```
 
@@ -2242,6 +2242,20 @@ Configurar toda a infraestrutura de estilização da aplicação utilizando Styl
 - [ ] Projeto compilando sem erros.
 - [ ] ESLint sem erros.
 ```
+
+# Após o Merge
+
+Executar:
+
+```bash
+git checkout main
+git pull origin main
+git branch -d chore/styled-components
+```
+
+Excluir também a branch remota no GitHub.
+
+---
 
 # Critérios para considerar esta etapa concluída
 
