@@ -98,47 +98,177 @@ Executar:
 npm install react-router-dom
 ```
 
+Ao concluir a instalação, confirme se a dependência foi adicionada ao arquivo `package.json`:
+
+```json
+{
+  "dependencies": {
+    "react-router-dom": "^7.x.x"
+  }
+}
+```
+
+> A versão pode variar conforme a data da instalação.
+
+Após a instalação, não é necessário realizar nenhuma configuração adicional nesta etapa.
+
 ---
 
 # Etapa 2 — Criar a estrutura de roteamento
 
-Criar:
+Criar a seguinte estrutura:
 
 ```text
-src/routes/
-
-index.tsx
-
-AppRoutes.tsx
+src/
+└── routes/
+    ├── index.tsx
+    └── AppRoutes.tsx
 ```
 
-`index.tsx` deverá ser responsável por configurar o provedor de roteamento.
+## Responsabilidade de cada arquivo
 
-`AppRoutes.tsx` deverá concentrar exclusivamente a definição das rotas da aplicação.
+### `src/routes/index.tsx`
+
+Será responsável por configurar o provedor de roteamento da aplicação (`BrowserRouter`).
+
+Todo o roteamento deverá ficar encapsulado neste arquivo, evitando adicionar configurações diretamente no `main.tsx`.
+
+Criar o arquivo:
+
+```tsx
+import { BrowserRouter } from 'react-router-dom';
+
+import { AppRoutes } from './AppRoutes';
+
+export function Router() {
+  return (
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  );
+}
+```
+
+---
+
+### `src/routes/AppRoutes.tsx`
+
+Será responsável exclusivamente pela definição das rotas da aplicação.
+
+Criar o arquivo:
+
+```tsx
+import { Routes, Route } from 'react-router-dom';
+
+import { Home } from '@/pages/Home';
+
+export function AppRoutes() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
+  );
+}
+```
+
+> Nesta etapa existirá apenas uma rota (`/`), porém todas as futuras rotas deverão ser adicionadas neste arquivo.
 
 ---
 
 # Etapa 3 — Configurar a rota principal
 
-Criar a rota inicial:
+A primeira rota da aplicação será a raiz (`/`).
+
+Ela deverá renderizar a página inicial da aplicação.
+
+Caso a página `Home` ainda não exista, criá-la antes de prosseguir.
+
+Estrutura esperada:
 
 ```text
-/
+src/
+└── pages/
+    └── Home/
+        └── index.tsx
 ```
 
-Ela deverá renderizar temporariamente a página principal da aplicação.
+Exemplo de implementação:
 
-Nenhuma outra rota será criada nesta etapa.
+```tsx
+export function Home() {
+  return (
+    <main>
+      <h1>Home</h1>
+    </main>
+  );
+}
+```
+
+Com isso, a configuração da rota permanecerá:
+
+```tsx
+<Routes>
+  <Route path="/" element={<Home />} />
+</Routes>
+```
+
+Nesta etapa não serão criadas rotas como:
+
+- `/about`
+- `/contact`
+- `/login`
+- `/dashboard`
+- `*` (Not Found)
+
+Essas rotas serão adicionadas conforme a evolução do projeto.
 
 ---
 
 # Etapa 4 — Integrar ao projeto
 
-Atualizar o ponto de entrada da aplicação para utilizar o componente de roteamento criado.
+Após criar a infraestrutura de roteamento, atualizar o ponto de entrada da aplicação.
 
-Evitar configurar o `BrowserRouter` diretamente em `main.tsx`.
+O arquivo `main.tsx` **não** deverá possuir nenhuma configuração relacionada ao `BrowserRouter`.
 
-Toda a configuração deverá permanecer encapsulada em `src/routes`.
+Toda essa responsabilidade ficará centralizada em `src/routes/index.tsx`.
+
+Exemplo:
+
+```tsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+import App from './App';
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+);
+```
+
+Em seguida, atualizar o `App.tsx` para utilizar o componente de roteamento criado.
+
+Exemplo:
+
+```tsx
+import { Router } from '@/routes';
+
+function App() {
+  return <Router />;
+}
+
+export default App;
+```
+
+Com essa organização:
+
+- `main.tsx` permanece responsável apenas por iniciar a aplicação;
+- `App.tsx` atua como componente raiz da aplicação;
+- `src/routes/index.tsx` concentra toda a configuração do React Router;
+- `AppRoutes.tsx` define exclusivamente as rotas disponíveis.
+
+Essa separação reduz o acoplamento e facilita a evolução da arquitetura conforme novas páginas forem sendo adicionadas.
 
 ---
 
@@ -186,7 +316,7 @@ Confirmar:
 
 # Arquivos alterados
 
-- `src/main.tsx`
+- `src/app.tsx`
 
 ---
 

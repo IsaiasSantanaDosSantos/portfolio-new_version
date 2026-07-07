@@ -272,23 +272,11 @@ Caso esteja utilizando **pnpm**, execute:
 pnpm add styled-components
 ```
 
-<!-- Depois:
-
-```bash
-pnpm add -D @types/styled-components
-``` -->
-
 Caso esteja utilizando **npm**, execute:
 
 ```bash
 npm install styled-components
 ```
-
-<!-- Depois:
-
-```bash
-npm install -D @types/styled-components
-``` -->
 
 ---
 
@@ -300,11 +288,7 @@ Após executar os comandos acima, o arquivo `package.json` deverá possuir depen
 {
   "dependencies": {
     "styled-components": "^6.x.x"
-  },
-
-//   "devDependencies": {
-//     "@types/styled-components": "^5.x.x"
-//   }
+  }
 }
 ```
 
