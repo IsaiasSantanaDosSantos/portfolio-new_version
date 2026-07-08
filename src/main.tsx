@@ -6,6 +6,8 @@ import { GlobalStyle, theme } from '@styles';
 
 import { TestAlias } from '@utils/test-alias.ts';
 
+import './translations';
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
