@@ -1,1 +1,1 @@
-Agora falta seguir o passo "[React Router](./13-react-router.md)"
+Agora falta seguir o passo "[React Router](./14 - Internacionalização)"

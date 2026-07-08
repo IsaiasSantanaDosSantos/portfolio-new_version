@@ -85,24 +85,23 @@ npm install i18next react-i18next i18next-browser-languagedetector
 
 # Estrutura esperada
 
-Ao concluir esta etapa:
+Ao concluir esta etapa, a estrutura deverá estar semelhante a:
 
 ```text
 src/
-
-translations/
 │
-├── index.ts
-├── i18n.ts
-│
-├── pt-BR/
-│   └── common.json
-│
-├── en/
-│   └── common.json
-│
-└── es/
-    └── common.json
+├── translations/
+│   ├── index.ts
+│   ├── i18n.ts
+│   │
+│   ├── pt-BR/
+│   │   └── common.json
+│   │
+│   ├── en/
+│   │   └── common.json
+│   │
+│   └── es/
+│       └── common.json
 ```
 
 ---
@@ -115,59 +114,36 @@ Executar:
 npm install i18next react-i18next i18next-browser-languagedetector
 ```
 
+Ao final da instalação, as dependências deverão aparecer no arquivo `package.json`.
+
 ---
 
-# Etapa 2 — Criar a estrutura
+# Etapa 2 — Criar a estrutura de arquivos
 
-Criar:
+Criar a seguinte estrutura:
 
 ```text
-src/translations/
-
-index.ts
-
-i18n.ts
-
-pt-BR/common.json
-
-en/common.json
-
-es/common.json
+src/
+└── translations/
+    ├── index.ts
+    ├── i18n.ts
+    ├── pt-BR/
+    │   └── common.json
+    ├── en/
+    │   └── common.json
+    └── es/
+        └── common.json
 ```
 
-Inicialmente criar apenas o namespace `common`.
+Inicialmente será utilizado apenas o namespace `common`.
 
-Novos namespaces serão adicionados conforme a aplicação crescer.
-
----
-
-# Etapa 3 — Configurar o i18next
-
-Configurar:
-
-- idioma padrão;
-- idiomas suportados;
-- namespace inicial;
-- fallback language;
-- detector do idioma do navegador.
-
-Utilizar a configuração oficial do i18next.
+Cada pasta representa um idioma suportado pela aplicação.
 
 ---
 
-# Etapa 4 — Integrar ao projeto
+# Etapa 3 — Criar os arquivos de tradução
 
-Inicializar o i18next no ponto de entrada da aplicação.
-
-Garantir que toda a aplicação utilize o Provider do react-i18next.
-
----
-
-# Etapa 5 — Validar a configuração
-
-Criar temporariamente uma chave de tradução.
-
-Exemplo:
+## pt-BR/common.json
 
 ```json
 {
@@ -175,13 +151,156 @@ Exemplo:
 }
 ```
 
-Consumir essa chave em um componente.
+## en/common.json
 
-Confirmar que a tradução é renderizada corretamente.
+```json
+{
+  "hello": "Hello"
+}
+```
 
-Após a validação, manter apenas as traduções que fizerem sentido para a aplicação.
+## es/common.json
+
+```json
+{
+  "hello": "Hola"
+}
+```
+
+Esses arquivos armazenam as traduções de cada idioma.
+
+Cada chave deve possuir exatamente o mesmo nome em todos os arquivos, alterando apenas o valor traduzido.
 
 ---
+
+# Etapa 4 — Configurar o i18next
+
+Criar o arquivo `src/translations/i18n.ts` com a configuração inicial do i18next.
+
+Conteúdo do arquivo:
+
+```ts
+import i18n from 'i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+import { initReactI18next } from 'react-i18next';
+
+import ptBR from './pt-BR/common.json';
+import en from './en/common.json';
+import es from './es/common.json';
+
+i18n
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    resources: {
+      'pt-BR': {
+        common: ptBR,
+      },
+      en: {
+        common: en,
+      },
+      es: {
+        common: es,
+      },
+    },
+
+    lng: 'pt-BR',
+
+    fallbackLng: 'pt-BR',
+
+    supportedLngs: ['pt-BR', 'en', 'es'],
+
+    defaultNS: 'common',
+
+    ns: ['common'],
+
+    interpolation: {
+      escapeValue: false,
+    },
+  });
+
+export default i18n;
+```
+
+### Explicação da configuração
+
+| Propriedade                 | Finalidade                                                                          |
+| --------------------------- | ----------------------------------------------------------------------------------- |
+| `resources`                 | Carrega todos os arquivos de tradução da aplicação.                                 |
+| `lng`                       | Define o idioma inicial da aplicação (`pt-BR`).                                     |
+| `fallbackLng`               | Idioma utilizado caso uma tradução não seja encontrada.                             |
+| `supportedLngs`             | Lista de idiomas oficialmente suportados pela aplicação.                            |
+| `defaultNS`                 | Define o namespace padrão utilizado nas traduções.                                  |
+| `ns`                        | Lista de namespaces carregados inicialmente.                                        |
+| `interpolation.escapeValue` | Desabilita o escape de HTML, pois o React já realiza essa proteção automaticamente. |
+
+Ao final desta etapa, o i18next estará configurado para:
+
+- utilizar português do Brasil como idioma padrão;
+- detectar automaticamente o idioma do navegador quando possível;
+- utilizar `pt-BR` como idioma de fallback;
+- carregar o namespace `common`;
+- disponibilizar as traduções para toda a aplicação através do `react-i18next`.
+
+O arquivo deverá exportar a instância configurada do i18next utilizando:
+
+```ts
+export default i18n;
+```
+
+---
+
+# Etapa 5 — Criar o arquivo de exportação
+
+No arquivo `src/translations/index.ts`, realizar apenas a importação da configuração criada anteriormente.
+
+Exemplo:
+
+```ts
+import './i18n';
+```
+
+Esse arquivo será utilizado para inicializar toda a configuração de internacionalização da aplicação.
+
+---
+
+# Etapa 6 — Integrar ao projeto
+
+No ponto de entrada da aplicação (normalmente `main.tsx`), importar:
+
+```ts
+import './translations';
+```
+
+Essa importação garante que o i18next seja inicializado antes da renderização da aplicação.
+
+Não é necessário criar nenhum Provider adicional, pois o `react-i18next` integra-se automaticamente após a inicialização.
+
+---
+
+# Etapa 7 — Validar a configuração
+
+Criar temporariamente uma chave de tradução:
+
+```json
+{
+  "hello": "Olá"
+}
+```
+
+Em seguida, utilizar o hook do `react-i18next` em qualquer componente para verificar se a tradução está sendo carregada corretamente.
+
+Exemplo:
+
+```tsx
+const { t } = useTranslation();
+
+return <h1>{t('hello')}</h1>;
+```
+
+Se a configuração estiver correta, o texto será exibido conforme o idioma ativo.
+
+Após validar o funcionamento, manter apenas as traduções que fizerem sentido para a aplicação.
 
 # Validação
 
