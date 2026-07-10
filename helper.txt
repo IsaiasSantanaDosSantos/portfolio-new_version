@@ -1,1 +1,1 @@
-Agora falta seguir o passo "[React Router](./14 - Internacionalização)"
+Agora falta finalizar o passo "[React Router](./15-design-system.md)", já criei as pastas!
