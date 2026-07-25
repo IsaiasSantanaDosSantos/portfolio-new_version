@@ -1,3 +1,1 @@
-export function Card(text: string) {
-  return text;
-}
+export * from './Button';
