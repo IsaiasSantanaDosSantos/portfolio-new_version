@@ -3,24 +3,48 @@ import 'styled-components';
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
-      primaryYellow: string;
-      primaryBlack: string;
-      primaryWhite: string;
+      brand: {
+        primary: string;
+        primaryDark: string;
+        primaryLight: string;
+      };
 
-      yellowDark: string;
-      yellowLight: string;
-      yellowGlow: string;
+      background: {
+        primary: string;
+        secondary: string;
+        tertiary: string;
+      };
 
-      grayDarker: string;
-      grayDark: string;
-      grayMedium: string;
-      grayLight: string;
-      grayLighter: string;
+      surface: {
+        primary: string;
+        secondary: string;
+        elevated: string;
+      };
 
-      success: string;
-      warning: string;
-      danger: string;
-      info: string;
+      text: {
+        primary: string;
+        secondary: string;
+        inverse: string;
+        disabled: string;
+      };
+
+      border: {
+        primary: string;
+        secondary: string;
+        focus: string;
+      };
+
+      feedback: {
+        success: string;
+        warning: string;
+        danger: string;
+        info: string;
+      };
+
+      overlay: {
+        light: string;
+        dark: string;
+      };
     };
 
     glass: {
@@ -37,20 +61,49 @@ declare module 'styled-components' {
       shadow: string;
     };
 
-    fonts: {
-      primary: string;
-      secondary: string;
-    };
+    typography: {
+      fontFamily: {
+        primary: string;
+        secondary: string;
+      };
+      fontWeight: {
+        thin: number;
+        extraLight: number;
+        light: number;
+        regular: number;
+        medium: number;
+        semiBold: number;
+        bold: number;
+        extraBold: number;
+        black: number;
+      };
 
-    fontSize: {
-      xs: string;
-      sm: string;
-      base: string;
-      md: string;
-      lg: string;
-      xl: string;
-      '2xl': string;
-      '3xl': string;
+      fontSize: {
+        xs: string; // 12px
+        sm: string; // 14pxstring
+        base: string; // 16px
+        md: string; // 18px
+        lg: string; // 20px
+        xl: string; // 24px
+        '2xl': string; // 32px
+        '3xl': string; // 40px
+      };
+      lineHeight: {
+        none: number;
+        tight: number;
+        snug: number;
+        normal: number;
+        relaxed: number;
+        loose: number;
+      };
+      letterSpacing: {
+        tighter: string;
+        tight: string;
+        normal: string;
+        wide: string;
+        wider: string;
+        widest: string;
+      };
     };
 
     spacing: {

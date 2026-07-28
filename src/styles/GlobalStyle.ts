@@ -15,13 +15,13 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body{
-        background:${({ theme }) => theme.colors.primaryBlack};
+        background:${({ theme }) => theme.colors.background.primary};
 
-        color:${({ theme }) => theme.colors.primaryWhite};
+        color:${({ theme }) => theme.colors.text.primary};
 
-        font-family:${({ theme }) => theme.fonts.primary};
+        font-family: ${({ theme }) => theme.typography.fontFamily.primary};
 
-        font-size:${({ theme }) => theme.fontSize.base};
+        font-size:${({ theme }) => theme.typography.fontSize.base};
 
         line-height:1.5;
 
