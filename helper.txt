@@ -1,1 +1,1 @@
-Agora falta finalizar o passo  16 - Tema e Design Tokens(./16-theme-and-design-tokens.md)", já criei as pastas!
+Proximo passo  17 - Arquitetura dos Componentes(./17-component-architecture.md)"
