@@ -10,8 +10,7 @@ export const Field = styled.input`
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
 
-  border: ${({ theme }) => theme.spacing.xs} solid
-    ${({ theme }) => theme.colors.border.primary};
+  border: ${({ theme }) => theme.spacing.xs} solid ${({ theme }) => theme.colors.border.primary};
 
   background: ${({ theme }) => theme.colors.background.primary};
 

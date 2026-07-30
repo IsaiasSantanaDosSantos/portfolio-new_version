@@ -1659,10 +1659,7 @@ useClickOutside/
 ```tsx
 import { RefObject, useEffect } from 'react';
 
-export function useClickOutside(
-  ref: RefObject<HTMLElement>,
-  callback: () => void,
-) {
+export function useClickOutside(ref: RefObject<HTMLElement>, callback: () => void) {
   useEffect(() => {
     function handleClick(event: MouseEvent) {
       if (ref.current && !ref.current.contains(event.target as Node)) {
@@ -2077,10 +2074,7 @@ debounce/
 ## debounce.ts
 
 ```ts
-export function debounce<T extends (...args: any[]) => void>(
-  callback: T,
-  delay = 300,
-) {
+export function debounce<T extends (...args: any[]) => void>(callback: T, delay = 300) {
   let timeout: ReturnType<typeof setTimeout>;
 
   return (...args: Parameters<T>) => {

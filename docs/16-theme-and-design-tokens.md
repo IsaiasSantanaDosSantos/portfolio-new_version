@@ -1270,10 +1270,7 @@ import { darkTheme } from '@/styles/theme/dark';
 será possível utilizar:
 
 ```ts
-import {
-  lightTheme,
-  darkTheme,
-} from '@/styles/theme';
+import { lightTheme, darkTheme } from '@/styles/theme';
 ```
 
 Essa abordagem reduz o acoplamento entre os arquivos e facilita futuras alterações na estrutura interna da pasta.
@@ -1428,18 +1425,18 @@ Cada categoria de token deverá permanecer em seu respectivo arquivo.
 
 Exemplo:
 
-| Categoria | Arquivo |
-|-----------|----------|
-| Cores | colors.ts |
-| Tipografia | typography.ts |
-| Espaçamentos | spacing.ts |
-| Bordas | borders.ts |
-| Sombras | shadows.ts |
-| Blur | blur.ts |
-| Opacidade | opacity.ts |
-| Breakpoints | breakpoints.ts |
-| Transições | transitions.ts |
-| Z-Index | zIndex.ts |
+| Categoria    | Arquivo        |
+| ------------ | -------------- |
+| Cores        | colors.ts      |
+| Tipografia   | typography.ts  |
+| Espaçamentos | spacing.ts     |
+| Bordas       | borders.ts     |
+| Sombras      | shadows.ts     |
+| Blur         | blur.ts        |
+| Opacidade    | opacity.ts     |
+| Breakpoints  | breakpoints.ts |
+| Transições   | transitions.ts |
+| Z-Index      | zIndex.ts      |
 
 Essa organização facilita a localização das informações e evita responsabilidades duplicadas.
 

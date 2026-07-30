@@ -4,8 +4,7 @@ export const Loader = styled.div`
   width: 2rem;
   height: 2rem;
 
-  border: ${({ theme }) => theme.spacing.xs} solid
-    ${({ theme }) => theme.colors.border.primary};
+  border: ${({ theme }) => theme.spacing.xs} solid ${({ theme }) => theme.colors.border.primary};
   border-top-color: ${({ theme }) => theme.colors.border.secondary};
 
   border-radius: 50%;
