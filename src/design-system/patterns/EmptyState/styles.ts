@@ -13,9 +13,9 @@ export const Container = styled.section`
 `;
 
 export const Title = styled.h3`
-  color: ${({ theme }) => theme.colors.primaryWhite};
+  color: ${({ theme }) => theme.colors.text.primary};
 `;
 
 export const Message = styled.p`
-  color: ${({ theme }) => theme.colors.grayMedium};
+  color: ${({ theme }) => theme.colors.text.primary};
 `;

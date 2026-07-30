@@ -13,15 +13,15 @@ export const Container = styled.section`
 `;
 
 export const Title = styled.h1`
-  font-size: ${({ theme }) => theme.fontSize['3xl']};
+  font-size: ${({ theme }) => theme.typography.fontSize['3xl']};
 
-  color: ${({ theme }) => theme.colors.primaryWhite};
+  color: ${({ theme }) => theme.colors.text.primary};
 `;
 
 export const Subtitle = styled.p`
   margin-top: ${({ theme }) => theme.spacing.md};
 
-  font-size: ${({ theme }) => theme.fontSize.lg};
+  font-size: ${({ theme }) => theme.typography.fontSize.base};
 
-  color: ${({ theme }) => theme.colors.grayLight};
+  color: ${({ theme }) => theme.colors.text.primary};
 `;

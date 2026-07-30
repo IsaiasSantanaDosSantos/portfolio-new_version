@@ -10,11 +10,11 @@ export const Container = styled.button`
   border: none;
   border-radius: ${({ theme }) => theme.borderRadius.md};
 
-  background: ${({ theme }) => theme.colors.primaryYellow};
-  color: ${({ theme }) => theme.colors.primaryBlack};
+  background: ${({ theme }) => theme.colors.background.primary};
+  color: ${({ theme }) => theme.colors.text.primary};
 
-  font-family: ${({ theme }) => theme.fonts.primary};
-  font-size: ${({ theme }) => theme.fontSize.base};
+  font-family: ${({ theme }) => theme.typography.fontFamily.primary};
+  font-size: ${({ theme }) => theme.typography.fontSize.base};
 
   cursor: pointer;
 

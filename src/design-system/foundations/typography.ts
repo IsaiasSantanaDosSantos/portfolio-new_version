@@ -1,6 +1,6 @@
 import { theme } from '@styles';
 
 export const typography = {
-  fontFamily: theme.fonts,
-  fontSize: theme.fontSize,
+  fontFamily: theme.typography.fontFamily.primary,
+  fontSize: theme.typography.fontSize.base,
 };

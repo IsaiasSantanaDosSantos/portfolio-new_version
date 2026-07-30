@@ -11,13 +11,13 @@ export const Container = styled.header`
 `;
 
 export const Title = styled.h2`
-  font-size: ${({ theme }) => theme.fontSize['2xl']};
+  font-size: ${({ theme }) => theme.typography.fontSize['2xl']};
 
-  color: ${({ theme }) => theme.colors.primaryWhite};
+  color: ${({ theme }) => theme.colors.text.primary};
 `;
 
 export const Description = styled.p`
-  color: ${({ theme }) => theme.colors.grayLight};
+  color: ${({ theme }) => theme.colors.text.secondary};
 
-  font-size: ${({ theme }) => theme.fontSize.base};
+  font-size: ${({ theme }) => theme.typography.fontSize.base};
 `;
