@@ -1,1 +1,1 @@
-Proximo passo  17 - Arquitetura dos Componentes(./17-component-architecture.md)"
+Proximo passo  17.1 - Gap Arquitetura dos Componentes(./17.1-Gap.md)"
