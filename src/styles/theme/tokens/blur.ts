@@ -1,5 +1,5 @@
 export const blur = {
-  sm: '',
-  md: '',
-  lg: '',
+  sm: '4px',
+  md: '10px',
+  lg: '20px',
 };

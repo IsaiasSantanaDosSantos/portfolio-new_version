@@ -32,7 +32,7 @@ export const colors = {
     info: '#3DC2FF',
   },
   overlay: {
-    light: 'rgba(...)',
-    dark: 'rgba(...)',
+    light: 'rgba(255,255,255,0.6)',
+    dark: 'rgba(0,0,0,0.4)',
   },
 };
